@@ -74,4 +74,4 @@ app.register_blueprint(document_share)
 app.register_blueprint(daoinkpay)
 
 if __name__ == '__main__':
-    app.run(host='192.168.3.5', port=80)
+    app.run(host='192.168.43.170', port=80)

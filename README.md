@@ -15,7 +15,7 @@
 ### 开发团队
 国内某一本大学的在校大学生，对互联网技术充满热情，渴望通过技术打破传统常规，梦想着用知识改变世界。
 - 前端：糯米 https://github.com/Aninassimova
-- 后端：落凤 http://git.careyou.xin
+- 后端：落风 http://git.careyou.xin
 
 ## 2. 技术文档
 ### 技术架构
