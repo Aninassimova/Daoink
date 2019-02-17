@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+		">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="../static/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/css/jquery-weui.css">
+    <link rel="stylesheet" href="../static/mycss/demos.css">
+    <link rel="stylesheet" href="../static/css/light7.css">
+    <style type="text/css">
+        .weui-cell{
+            height: 45px;
+        }
+        html,body{ overflow:hidden;}
+    </style>
+</head>
+<body id="main" style="height: 100%;background-color: #2c2a2a ">
+    <div id="">
+        <script src="../static/lib/jquery-2.1.4.js"></script>
+        <script src="../static/lib/fastclick.js"></script>
+        <script src="../static/js/jquery-weui.js"></script>
+
+        <script>
+            var UserName = '{{ g.current_userphone }}'            // 后端数据
+            var time_now = '{{ now }}'
+            var flag = '{{ flag }}'
+        </script>
+        {#    <div style="background: url(../static/images/login.jpg); background-size:100% 100%; height: 639px">#}
+        <div class="weui-flex" style="margin-top: 10%; margin-left: 12%">
+            <img src="/static/font/logo.jpg" style="width: 60px;height: 60px;margin-right: 10px">
+            <div class="weui-flex__item">
+                <h2 style="font-family: 方正兰亭超细黑简体; color: white">道墨云印</h2>
+                <h6 style="font-family: '等线 Light'; color: white">远程打印，免排队自取</h6>
+            </div>
+        </div>
+        <form method="post" id="my-form" name="my-form">
+            <div class="weui-cells weui-cells_form" style="background-color: rgba(52,50,50,1); margin-left: 30px;margin-right: 30px; margin-top: 7%">
+
+                <div class="weui-cell weui-cell_vcode" style="height: 50px;">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="tel" name="tel" placeholder="请输入手机号" required="required" style="color: white">
+                    </div>
+                </div>
+
+                <div class="weui-cell weui-cell_vcode" style="height: 50px">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="password" name="password" placeholder="请输入密码" required="required" style="color: white" >
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="weui-flex">
+                <div class="weui-flex__item" style="margin-left: 30px; margin-right: 30px">
+                    <input class="weui-btn weui-btn_primary" type="submit" value="登录">
+                </div>
+            </div>
+        </form>
+        <br>
+        <div>
+            <a class="pull-right" style="margin-right: 30px" href="/register">新用户注册</a>
+            <a class="pull-left" style="margin-left: 30px" href="/findpassword">忘记密码？</a>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="weui-footer">
+            <p class="weui-footer__links">
+                <a href=" " class="weui-footer__link"></a>
+            </p>
+            <p class="weui-footer__text">Copyright © 2018 daoink.com</p>
+        </div>
+        {% if flag == 2 %}
+            <script>
+                $(function() {
+                    $.alert("登录失败，请重试", "警告")
+                });
+            </script>
+        {% endif %}
+
+
+    </div>
+
+{#    <script>#}
+{##}
+{#        var HEIGHT = $('body').height()+"px";#}
+{#        alert(HEIGHT);#}
+{#        $("#main").css(height,HEIGHT);#}
+{##}
+{#    </script>#}
+
+</body>
+
+</html>
